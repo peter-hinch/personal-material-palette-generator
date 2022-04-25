@@ -1,5 +1,5 @@
-import Swatch from './shared/Swatch';
-import { ColorTheme, PaletteLight, PaletteDark } from './../palette';
+import Swatch from './Swatch';
+import { ColorTheme, PaletteLight, PaletteDark } from '../../palette';
 
 const ColorScheme = ({ colorTheme }) => {
   let scheme;
@@ -13,7 +13,7 @@ const ColorScheme = ({ colorTheme }) => {
     ([key, paletteItem]) => <Swatch key={key} paletteItem={paletteItem} />
   );
 
-  return <div>{renderPaletteItems}</div>;
+  return <div className="color-scheme">{renderPaletteItems}</div>;
 };
 
 export default ColorScheme;
