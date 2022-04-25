@@ -14,14 +14,17 @@ function App() {
   return (
     <>
       <form>
+        <h2>Accent Colours</h2>
         <KeyColorOptions name="Primary Key Colour" color={colorPrimary} />
         <KeyColorOptions name="Secondary Key Colour" color={colorSecondary} />
         <KeyColorOptions name="Tertiary Key Colour" color={colorTertiary} />
+        <h2>Neutral Colours</h2>
         <KeyColorOptions name="Neutral Key Colour" color={colorNeutral} />
         <KeyColorOptions
           name="Neutral Variant Key Colour"
           color={colorNeutral2}
         />
+        <h2>Additional Colours</h2>
         <KeyColorOptions name="Error Key Colour" color={colorError} />
       </form>
       <ColorScheme colorTheme={ColorTheme.LIGHT} />
