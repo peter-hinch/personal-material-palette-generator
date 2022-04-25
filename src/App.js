@@ -1,5 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
+import ColorScheme from './components/ColorScheme';
+import { Mode } from './palette';
 
 function App() {
   return (
@@ -7,7 +8,8 @@ function App() {
       <form>
         <input type="color" />
       </form>
-      <div></div>
+      <ColorScheme mode={Mode.LIGHT} />
+      <ColorScheme mode={Mode.DARK} />
     </>
   );
 }
