@@ -3,6 +3,22 @@ body {
   font-weight: 400;
 }
 
+.key-color {
+  display: flex;
+  flex-direction: row;
+}
+
+.key-swatch {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 2.5rem;
+}
+
+.key-sliders {
+  display: flex;
+  flex-direction: column;
+}
+
 .color-scheme {
   display: grid;
   margin: 1rem;
@@ -13,12 +29,12 @@ body {
   background: red;
 }
 
-.swatch {
+.scheme-swatch {
   display: inline-block;
   padding: 1rem;
-  height: 8rem;
+  height: 5rem;
 }
 
-.swatch:last-child {
+.scheme-swatch:last-child {
   grid-column: span 2;
 }
