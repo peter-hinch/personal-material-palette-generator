@@ -3,6 +3,22 @@ body {
   font-weight: 400;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+.key-container {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: red;
+}
+
 .key-color {
   display: flex;
   flex-direction: row;
@@ -21,7 +37,7 @@ body {
 
 .color-scheme {
   display: grid;
-  margin: 1rem;
+  margin: 1rem 0;
   padding: 1rem;
   grid-template-columns: repeat(4, auto);
   row-gap: 1rem;
