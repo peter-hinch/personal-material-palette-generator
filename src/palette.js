@@ -1,4 +1,4 @@
-export const Mode = {
+export const ColorTheme = {
   LIGHT: 'light',
   DARK: 'dark'
 };
