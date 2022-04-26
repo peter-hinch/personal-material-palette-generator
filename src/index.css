@@ -22,6 +22,20 @@ h6 {
 .key-color {
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+
+.key-tones {
+  display: flex;
+  flex-direction: row;
+}
+
+.key-tone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 4rem;
 }
 
 .key-swatch {
