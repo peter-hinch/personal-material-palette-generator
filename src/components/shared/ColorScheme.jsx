@@ -1,7 +1,7 @@
 import Swatch from './Swatch';
 import { ColorTheme, PaletteLight, PaletteDark } from '../../palette';
 
-const ColorScheme = ({ colorTheme }) => {
+const ColorScheme = ({ colors, colorTheme }) => {
   let scheme;
   if (colorTheme === ColorTheme.LIGHT) {
     scheme = PaletteLight;
@@ -10,7 +10,9 @@ const ColorScheme = ({ colorTheme }) => {
   }
 
   const renderPaletteItems = Object.entries(scheme).map(
-    ([key, paletteItem]) => <Swatch key={key} paletteItem={paletteItem} />
+    ([key, paletteItem]) => (
+      <Swatch key={key} colors={colors} paletteItem={paletteItem} />
+    )
   );
 
   return <div className="color-scheme">{renderPaletteItems}</div>;
