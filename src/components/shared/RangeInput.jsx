@@ -1,11 +1,17 @@
-const RangeInput = ({ label, min, max, value }) => {
+const RangeInput = ({ label, min, max, value, handleColorChange }) => {
   return (
     <div>
       <label>
         {label}
-        <input type="range" min={min} max={max} value={value} />
+        <input
+          type="range"
+          min={min}
+          max={max}
+          value={value}
+          onChange={handleColorChange}
+        />
       </label>
-      <input type="number" value={value} />
+      <input type="number" value={value} onChange={handleColorChange} />
     </div>
   );
 };
