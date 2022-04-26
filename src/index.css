@@ -1,4 +1,7 @@
 @media only screen and (max-width: 727px) {
+  .container {
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 728px) {
   .container {
@@ -57,20 +60,21 @@ h6 {
 .key-tones {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .key-tone {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5rem;
-  width: 4rem;
+  height: 4rem;
+  width: 3rem;
 }
 
 .key-swatch {
-  height: 5rem;
-  width: 5rem;
-  border-radius: 2.5rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 2rem;
 }
 
 .key-sliders {
