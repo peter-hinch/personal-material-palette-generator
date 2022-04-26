@@ -49,6 +49,10 @@ h6 {
   flex-direction: column;
 }
 
+.key-sliders input[type='number'] {
+  width: 4rem;
+}
+
 .color-scheme {
   display: grid;
   margin: 1rem 0;
