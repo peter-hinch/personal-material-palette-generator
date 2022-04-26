@@ -13,6 +13,28 @@ const validateHsl = (string) => {
   return pattern.exec(string);
 };
 
+// Calculate tone based on Material Design 3 specification for a given tonal
+// value in the range 0-100
+export const calculateTone = (keyLightness, tone) => {
+  // Note: tones are not mapped directly to lightness values of 0 - 100, the
+  // key color is set to the tone '40' and other values are extrapolated
+  // from that value.
+  if (tone >= 0 && tone < 40) {
+    // For tones 0-40 the values are evenly distributed
+    // between 0 (black) - keyLightness
+    return (keyLightness / 40) * tone;
+  } else if (tone === 40) {
+    // The provided tone can be returned unchanged.
+    return keyLightness;
+  } else if (tone > 40 && tone <= 100) {
+    // For tones 40-100 the values are evenly distributed
+    // between keyLightness - 100 (white)
+    return keyLightness + (keyLightness / 59) * tone;
+  } else {
+    return undefined;
+  }
+};
+
 export const hexToHsl = (stringHex) => {
   validateHex(stringHex);
 };

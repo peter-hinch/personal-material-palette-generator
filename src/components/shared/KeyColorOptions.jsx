@@ -1,13 +1,24 @@
 import RangeInput from './RangeInput';
+import { calculateTone } from '../../colorConversion';
 
 const KeyColorOptions = ({ name, color }) => {
-  // Note: tones are not mapped directly to lightness values of 0 - 100, the
-  // key color is set to the tone named 40 and other values are extrapolated
-  // from that value.
   const tones = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 99, 100];
-  const tonalVariationStyle = (tone) => ({
-    backgroundColor: `hsl(${color.h}, ${color.s}%, ${(color.l / 40) * tone}%)`
-  });
+
+  const tonalVariationStyle = (tone) => {
+    let adjustedLum = calculateTone(color.l, tone);
+    let textColor;
+
+    if (tone < 50) {
+      textColor = 'white';
+    } else {
+      textColor = 'black';
+    }
+
+    return {
+      color: textColor,
+      backgroundColor: `hsl(${color.h}, ${color.s}%, ${adjustedLum}%)`
+    };
+  };
 
   return (
     <div className="key-container">
