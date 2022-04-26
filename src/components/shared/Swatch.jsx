@@ -11,13 +11,13 @@ const Swatch = ({ paletteItem }) => {
       <div>{paletteItem.swatchName}</div>
       <div>
         <small>
-          {paletteItem.key}
+          {paletteItem.name}
           {paletteItem.foregroundTone}
         </small>
       </div>
       <div>
         <small>
-          {paletteItem.key}
+          {paletteItem.name}
           {paletteItem.backgroundTone}
         </small>
       </div>
