@@ -4,12 +4,12 @@ export const ColorTheme = {
 };
 
 export const PaletteKey = {
-  PRIMARY: PaletteKey.PRIMARY,
-  SECONDARY: PaletteKey.SECONDARY,
-  TERTIARY: PaletteKey.TERTIARY,
-  NEUTRAL: PaletteKey.NEUTRAL,
-  NEUTRAL_VARIANT: PaletteKey.NEUTRAL_VARIANT,
-  ERROR: PaletteKey.ERROR
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  TERTIARY: 'tertiary',
+  NEUTRAL: 'neutral',
+  NEUTRAL_VARIANT: 'neutralVariant',
+  ERROR: 'error'
 };
 
 export const PaletteLight = {
