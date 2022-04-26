@@ -6,13 +6,7 @@ const KeyColorOptions = ({ name, color }) => {
 
   const tonalVariationStyle = (tone) => {
     let adjustedLum = calculateTone(color.l, tone);
-    let textColor;
-
-    if (tone < 50) {
-      textColor = 'white';
-    } else {
-      textColor = 'black';
-    }
+    let textColor = tone < 50 ? 'white' : 'black';
 
     return {
       color: textColor,
