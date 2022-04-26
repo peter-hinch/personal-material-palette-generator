@@ -1,5 +1,8 @@
+import { calculateTone } from '../../colorConversion';
+
 const Swatch = ({ paletteItem }) => {
   const backgroundColorStyle = {
+    color: 'white',
     backgroundColor: 'grey'
   };
 
@@ -7,10 +10,16 @@ const Swatch = ({ paletteItem }) => {
     <div className="scheme-swatch" style={backgroundColorStyle}>
       <div>{paletteItem.swatchName}</div>
       <div>
-        <small>{paletteItem.foregroundColor}</small>
+        <small>
+          {paletteItem.key}
+          {paletteItem.foregroundTone}
+        </small>
       </div>
       <div>
-        <small>{paletteItem.backgroundColor}</small>
+        <small>
+          {paletteItem.key}
+          {paletteItem.backgroundTone}
+        </small>
       </div>
     </div>
   );
