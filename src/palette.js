@@ -6,235 +6,281 @@ export const ColorTheme = {
 export const PaletteLight = {
   PRIMARY: {
     swatchName: 'Primary',
-    foregroundColor: 'primary-100',
-    backgroundColor: 'primary-40'
+    key: 'Primary',
+    foregroundTone: 100,
+    backgroundTone: 40
   },
   ON_PRIMARY: {
     swatchName: 'On Primary',
-    foregroundColor: 'primary-40',
-    backgroundColor: 'primary-100'
+    key: 'Primary',
+    foregroundTone: 40,
+    backgroundTone: 100
   },
   PRIMARY_CONTAINER: {
     swatchName: 'Primary Container',
-    foregroundColor: 'primary-10',
-    backgroundColor: 'primary-90'
+    key: 'Primary',
+    foregroundTone: 10,
+    backgroundTone: 90
   },
   ON_PRIMARY_CONTAINER: {
     swatchName: 'On Primary Container',
-    foregroundColor: 'primary-90',
-    backgroundColor: 'primary-10'
+    key: 'Primary',
+    foregroundTone: 90,
+    backgroundTone: 10
   },
   SECONDARY: {
     swatchName: 'Secondary',
-    foregroundColor: 'secondary-100',
-    backgroundColor: 'secondary-40'
+    key: 'Secondary',
+    foregroundTone: 100,
+    backgroundTone: 40
   },
   ON_SECONDARY: {
     swatchName: 'On Secondary',
-    foregroundColor: 'secondary-40',
-    backgroundColor: 'secondary-100'
+    key: 'Secondary',
+    foregroundTone: 40,
+    backgroundTone: 100
   },
   SECONDARY_CONTAINER: {
     swatchName: 'Secondary Container',
-    foregroundColor: 'secondary-10',
-    backgroundColor: 'secondary-90'
+    key: 'Secondary',
+    foregroundTone: 10,
+    backgroundTone: 90
   },
   ON_SECONDARY_CONTAINER: {
     swatchName: 'On Secondary Container',
-    foregroundColor: 'secondary-90',
-    backgroundColor: 'secondary-10'
+    key: 'Secondary',
+    foregroundTone: 90,
+    backgroundTone: 10
   },
   TERTIARY: {
     swatchName: 'Tertiary',
-    foregroundColor: 'tertiary-100',
-    backgroundColor: 'tertiary-40'
+    key: 'Tertiary',
+    foregroundTone: 100,
+    backgroundTone: 40
   },
   ON_TERTIARY: {
     swatchName: 'On Tertiary',
-    foregroundColor: 'tertiary-40',
-    backgroundColor: 'tertiary-100'
+    key: 'Tertiary',
+    foregroundTone: 40,
+    backgroundTone: 100
   },
   TERTIARY_CONTAINER: {
     swatchName: 'Tertiary Container',
-    foregroundColor: 'tertiary-10',
-    backgroundColor: 'tertiary-90'
+    key: 'Tertiary',
+    foregroundTone: 10,
+    backgroundTone: 90
   },
   ON_TERTIARY_CONTAINER: {
     swatchName: 'On Tertiary Container',
-    foregroundColor: 'tertiary-90',
-    backgroundColor: 'tertiary-10'
+    key: 'Tertiary',
+    foregroundTone: 90,
+    backgroundTone: 10
   },
   ERROR: {
     swatchName: 'Error',
-    foregroundColor: 'error-100',
-    backgroundColor: 'error-40'
+    key: 'Error',
+    foregroundTone: 100,
+    backgroundTone: 40
   },
   ON_ERROR: {
     swatchName: 'On Error',
-    foregroundColor: 'error-40',
-    backgroundColor: 'error-100'
+    key: 'Error',
+    foregroundTone: 40,
+    backgroundTone: 100
   },
   ERROR_CONTAINER: {
     swatchName: 'Error Container',
-    foregroundColor: 'error-10',
-    backgroundColor: 'error-90'
+    key: 'Error',
+    foregroundTone: 10,
+    backgroundTone: 90
   },
   ON_ERROR_CONTAINER: {
     swatchName: 'On Error Container',
-    foregroundColor: 'error-90',
-    backgroundColor: 'error-10'
+    key: 'Error',
+    foregroundTone: 90,
+    backgroundTone: 10
   },
   BACKGROUND: {
     swatchName: 'Background',
-    foregroundColor: 'neutral-10',
-    backgroundColor: 'neutral-99'
+    key: 'Neutral',
+    foregroundTone: 10,
+    backgroundTone: 99
   },
   ON_BACKGROUND: {
     swatchName: 'On Background',
-    foregroundColor: 'neutral-99',
-    backgroundColor: 'neutral-10'
+    key: 'Neutral',
+    foregroundTone: 99,
+    backgroundTone: 10
   },
   SURFACE: {
     swatchName: 'Surface',
-    foregroundColor: 'neutral-10',
-    backgroundColor: 'neutral-99'
+    key: 'Neutral',
+    foregroundTone: 10,
+    backgroundTone: 99
   },
   ON_SURFACE: {
     swatchName: 'On Surface',
-    foregroundColor: 'neutral-99',
-    backgroundColor: 'neutral-10'
+    key: 'Neutral',
+    foregroundTone: 99,
+    backgroundTone: 10
   },
   SURFACE_VARIANT: {
     swatchName: 'Surface Variant',
-    foregroundColor: 'neutral-variant-30',
-    backgroundColor: 'neutral-variant-90'
+    key: 'Neutral-Variant',
+    foregroundTone: 30,
+    backgroundTone: 90
   },
   ON_SURFACE_VARIANT: {
     swatchName: 'On Surface Variant',
-    foregroundColor: 'neutral-variant-90',
-    backgroundColor: 'neutral-variant-30'
+    key: 'Neutral-Variant',
+    foregroundTone: 90,
+    backgroundTone: 30
   },
   OUTLINE: {
     swatchName: 'Outline',
-    foregroundColor: 'neutral-variant-95',
-    backgroundColor: 'neutral-variant-50'
+    key: 'Neutral-Variant',
+    foregroundTone: 95,
+    backgroundTone: 50
   }
 };
 
 export const PaletteDark = {
   PRIMARY: {
     swatchName: 'Primary',
-    foregroundColor: 'primary-20',
-    backgroundColor: 'primary-80'
+    key: 'Primary',
+    foregroundTone: 20,
+    backgroundTone: 80
   },
   ON_PRIMARY: {
     swatchName: 'On Primary',
-    foregroundColor: 'primary-80',
-    backgroundColor: 'primary-20'
+    key: 'Primary',
+    foregroundTone: 80,
+    backgroundTone: 20
   },
   PRIMARY_CONTAINER: {
     swatchName: 'Primary Container',
-    foregroundColor: 'primary-90',
-    backgroundColor: 'primary-30'
+    key: 'Primary',
+    foregroundTone: 90,
+    backgroundTone: 30
   },
   ON_PRIMARY_CONTAINER: {
     swatchName: 'On Primary Container',
-    foregroundColor: 'primary-30',
-    backgroundColor: 'primary-90'
+    key: 'Primary',
+    foregroundTone: 30,
+    backgroundTone: 90
   },
   SECONDARY: {
     swatchName: 'Secondary',
-    foregroundColor: 'secondary-20',
-    backgroundColor: 'secondary-80'
+    key: 'Secondary',
+    foregroundTone: 20,
+    backgroundTone: 80
   },
   ON_SECONDARY: {
     swatchName: 'On Secondary',
-    foregroundColor: 'secondary-80',
-    backgroundColor: 'secondary-20'
+    key: 'Secondary',
+    foregroundTone: 80,
+    backgroundTone: 20
   },
   SECONDARY_CONTAINER: {
     swatchName: 'Secondary Container',
-    foregroundColor: 'secondary-90',
-    backgroundColor: 'secondary-30'
+    key: 'Secondary',
+    foregroundTone: 90,
+    backgroundTone: 30
   },
   ON_SECONDARY_CONTAINER: {
     swatchName: 'On Secondary Container',
-    foregroundColor: 'secondary-30',
-    backgroundColor: 'secondary-90'
+    key: 'Secondary',
+    foregroundTone: 30,
+    backgroundTone: 90
   },
   TERTIARY: {
     swatchName: 'Tertiary',
-    foregroundColor: 'tertiary-20',
-    backgroundColor: 'tertiary-80'
+    key: 'Tertiary',
+    foregroundTone: 20,
+    backgroundTone: 80
   },
   ON_TERTIARY: {
     swatchName: 'On Tertiary',
-    foregroundColor: 'tertiary-80',
-    backgroundColor: 'tertiary-20'
+    key: 'Tertiary',
+    foregroundTone: 80,
+    backgroundTone: 20
   },
   TERTIARY_CONTAINER: {
     swatchName: 'Tertiary Container',
-    foregroundColor: 'tertiary-90',
-    backgroundColor: 'tertiary-30'
+    key: 'Tertiary',
+    foregroundTone: 90,
+    backgroundTone: 30
   },
   ON_TERTIARY_CONTAINER: {
     swatchName: 'On Tertiary Container',
-    foregroundColor: 'tertiary-30',
-    backgroundColor: 'tertiary-90'
+    key: 'Tertiary',
+    foregroundTone: 30,
+    backgroundTone: 90
   },
   ERROR: {
     swatchName: 'Error',
-    foregroundColor: 'error-100',
-    backgroundColor: 'error-40'
+    key: 'Error',
+    foregroundTone: 100,
+    backgroundTone: 40
   },
   ON_ERROR: {
     swatchName: 'On Error',
-    foregroundColor: 'error-40',
-    backgroundColor: 'error-100'
+    key: 'Error',
+    foregroundTone: 40,
+    backgroundTone: 100
   },
   ERROR_CONTAINER: {
     swatchName: 'Error Container',
-    foregroundColor: 'error-10',
-    backgroundColor: 'error-90'
+    key: 'Error',
+    foregroundTone: 10,
+    backgroundTone: 90
   },
   ON_ERROR_CONTAINER: {
     swatchName: 'On Error Container',
-    foregroundColor: 'error-90',
-    backgroundColor: 'error-10'
+    key: 'Error',
+    foregroundTone: 90,
+    backgroundTone: 10
   },
   BACKGROUND: {
     swatchName: 'Background',
-    foregroundColor: 'neutral-90',
-    backgroundColor: 'neutral-10'
+    key: 'Neutral',
+    foregroundTone: 90,
+    backgroundTone: 10
   },
   ON_BACKGROUND: {
     swatchName: 'On Background',
-    foregroundColor: 'neutral-10',
-    backgroundColor: 'neutral-90'
+    key: 'Neutral',
+    foregroundTone: 10,
+    backgroundTone: 90
   },
   SURFACE: {
     swatchName: 'Surface',
-    foregroundColor: 'neutral-90',
-    backgroundColor: 'neutral-10'
+    key: 'Neutral',
+    foregroundTone: 90,
+    backgroundTone: 10
   },
   ON_SURFACE: {
     swatchName: 'On Surface',
-    foregroundColor: 'neutral-10',
-    backgroundColor: 'neutral-90'
+    key: 'Neutral',
+    foregroundTone: 10,
+    backgroundTone: 90
   },
   SURFACE_VARIANT: {
     swatchName: 'Surface Variant',
-    foregroundColor: 'neutral-variant-80',
-    backgroundColor: 'neutral-variant-30'
+    key: 'Neutral-Variant',
+    foregroundTone: 80,
+    backgroundTone: 30
   },
   ON_SURFACE_VARIANT: {
     swatchName: 'On Surface Variant',
-    foregroundColor: 'neutral-variant-30',
-    backgroundColor: 'neutral-variant-80'
+    key: 'Neutral-Variant',
+    foregroundTone: 30,
+    backgroundTone: 80
   },
   OUTLINE: {
     swatchName: 'Outline',
-    foregroundColor: 'neutral-variant-20',
-    backgroundColor: 'neutral-variant-60'
+    key: 'Neutral-Variant',
+    foregroundTone: 20,
+    backgroundTone: 60
   }
 };
