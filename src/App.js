@@ -13,6 +13,7 @@ function App() {
 
   return (
     <>
+      <h1>Material Design 3 Color Palette Generator</h1>
       <form>
         <h2>Accent Colours</h2>
         <KeyColorOptions name="Primary Key Colour" color={colorPrimary} />
