@@ -1,13 +1,27 @@
 import { calculateTone } from '../../colorConversion';
 
 const Swatch = ({ colors, paletteItem }) => {
-  const backgroundColorStyle = {
-    color: 'white',
-    backgroundColor: 'grey'
+  const swatchColorStyle = () => {
+    let keyHue = colors[paletteItem.colorKey].h;
+    let keySaturation = colors[paletteItem.colorKey].s;
+    let keyLightness = colors[paletteItem.colorKey].l;
+    let foregroundLightness = calculateTone(
+      keyLightness,
+      paletteItem.foregroundTone
+    );
+    let backgroundLightness = calculateTone(
+      keyLightness,
+      paletteItem.backgroundTone
+    );
+
+    return {
+      color: `hsl(${keyHue}, ${keySaturation}%, ${foregroundLightness}%)`,
+      backgroundColor: `hsl(${keyHue}, ${keySaturation}%, ${backgroundLightness}%)`
+    };
   };
 
   return (
-    <div className="scheme-swatch" style={backgroundColorStyle}>
+    <div className="scheme-swatch" style={swatchColorStyle()}>
       <div>{paletteItem.swatchName}</div>
       <div>
         <small>
