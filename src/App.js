@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import ColorScheme from './components/shared/ColorScheme';
 import KeyColorOptions from './components/shared/KeyColorOptions';
-import { ColorTheme } from './palette';
+import { PaletteKey, ColorTheme } from './palette';
 
 function App() {
   const [colors, setColors] = useState({
-    primary: { h: 101, s: 54, l: 27 },
-    secondary: { h: 95, s: 13, l: 34 },
-    tertiary: { h: 181, s: 62, l: 26 },
-    neutral: { h: 84, s: 3, l: 36 },
-    neutralVariant: { h: 90, s: 5, l: 36 },
-    error: { h: 3, s: 71, l: 41 }
+    [PaletteKey.PRIMARY]: { h: 101, s: 54, l: 27 },
+    [PaletteKey.SECONDARY]: { h: 95, s: 13, l: 34 },
+    [PaletteKey.TERTIARY]: { h: 181, s: 62, l: 26 },
+    [PaletteKey.NEUTRAL]: { h: 84, s: 3, l: 36 },
+    [PaletteKey.NEUTRAL_VARIANT]: { h: 90, s: 5, l: 36 },
+    [PaletteKey.ERROR]: { h: 3, s: 71, l: 41 }
   });
 
   return (
