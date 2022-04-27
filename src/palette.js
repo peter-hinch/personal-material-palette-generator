@@ -12,6 +12,12 @@ export const PaletteKey = {
   ERROR: 'error'
 };
 
+export const ColorComponent = {
+  HUE: 'h',
+  SATURATION: 's',
+  LIGHTNESS: 'l'
+};
+
 export const PaletteLight = {
   PRIMARY: {
     swatchName: 'Primary',
