@@ -1,17 +1,36 @@
-const RangeInput = ({ label, min, max, value, handleColorChange }) => {
+const RangeInput = ({
+  colorKey,
+  label,
+  min,
+  max,
+  value,
+  handleColorChange
+}) => {
+  const inputRangeId = `${colorKey}-${label}-range`;
+  const inputNumberId = `${colorKey}-${label}-number`;
+
   return (
     <div>
-      <label>
+      <label htmlFor={inputRangeId}>{label}</label>
+      <input
+        type="range"
+        id={inputRangeId}
+        min={min}
+        max={max}
+        value={value}
+        onChange={handleColorChange}
+      />
+      <label hidden htmlFor={inputNumberId}>
         {label}
-        <input
-          type="range"
-          min={min}
-          max={max}
-          value={value}
-          onChange={handleColorChange}
-        />
       </label>
-      <input type="number" value={value} onChange={handleColorChange} />
+      <input
+        type="number"
+        id={inputNumberId}
+        min={min}
+        max={max}
+        value={value}
+        onChange={handleColorChange}
+      />
     </div>
   );
 };

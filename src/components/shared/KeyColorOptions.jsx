@@ -1,7 +1,8 @@
 import RangeInput from './RangeInput';
 import { calculateTone } from '../../colorConversion';
+import { ColorComponent } from '../../palette';
 
-const KeyColorOptions = ({ name, color, handleColorChange }) => {
+const KeyColorOptions = ({ name, colorKey, color, handleColorChange }) => {
   const tones = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 99, 100];
 
   const tonalVariationStyle = (tone) => {
@@ -28,21 +29,24 @@ const KeyColorOptions = ({ name, color, handleColorChange }) => {
         </div>
         <div className="key-sliders">
           <RangeInput
-            label="Hue"
+            colorKey={colorKey}
+            label={ColorComponent.HUE}
             min={0}
             max={359}
             value={color.h}
             handleColorChange={handleColorChange}
           />
           <RangeInput
-            label="Saturation"
+            colorKey={colorKey}
+            label={ColorComponent.SATURATION}
             min={0}
             max={100}
             value={color.s}
             handleColorChange={handleColorChange}
           />
           <RangeInput
-            label="Lightness"
+            colorKey={colorKey}
+            label={ColorComponent.LIGHTNESS}
             min={25}
             max={55}
             value={color.l}
