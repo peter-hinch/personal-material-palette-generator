@@ -14,7 +14,24 @@ function App() {
   });
 
   const handleColorChange = (event) => {
-    console.log(handleColorChange, event);
+    // Capture the 3 components of the target's id tag.
+    const idFormat = /^([a-z]+)-([a-z]+)-([a-z]+)$/i;
+    // The regex exec() will return an array in the following format:
+    // ['primary-h-range', 'primary', 'h', 'range']
+    const idComponents = idFormat.exec(event.target.id);
+    const paletteKey = idComponents[1];
+    console.log('colors[paletteKey]', colors[paletteKey]);
+    // Generate a new object using the regex components and the input value.
+    const newColorSetting = { [idComponents[2]]: parseInt(event.target.value) };
+    const newColorsObject = {
+      ...colors,
+      [paletteKey]: {
+        ...colors[paletteKey],
+        ...newColorSetting
+      }
+    };
+    console.log('newColorsObject', newColorsObject);
+    setColors(newColorsObject);
   };
 
   return (
@@ -24,34 +41,40 @@ function App() {
         <h2>Accent Colours</h2>
         <KeyColorOptions
           name="Primary Key Colour"
-          color={colors.primary}
+          colorKey={PaletteKey.PRIMARY}
+          color={colors[PaletteKey.PRIMARY]}
           handleColorChange={handleColorChange}
         />
         <KeyColorOptions
           name="Secondary Key Colour"
-          color={colors.secondary}
+          colorKey={PaletteKey.SECONDARY}
+          color={colors[PaletteKey.SECONDARY]}
           handleColorChange={handleColorChange}
         />
         <KeyColorOptions
           name="Tertiary Key Colour"
-          color={colors.tertiary}
+          colorKey={PaletteKey.TERTIARY}
+          color={colors[PaletteKey.TERTIARY]}
           handleColorChange={handleColorChange}
         />
         <h2>Neutral Colours</h2>
         <KeyColorOptions
           name="Neutral Key Colour"
-          color={colors.neutral}
+          colorKey={PaletteKey.NEUTRAL}
+          color={colors[PaletteKey.NEUTRAL]}
           handleColorChange={handleColorChange}
         />
         <KeyColorOptions
           name="Neutral Variant Key Colour"
-          color={colors.neutralVariant}
+          colorKey={PaletteKey.NEUTRAL_VARIANT}
+          color={colors[PaletteKey.NEUTRAL_VARIANT]}
           handleColorChange={handleColorChange}
         />
         <h2>Additional Colours</h2>
         <KeyColorOptions
           name="Error Key Colour"
-          color={colors.error}
+          colorKey={PaletteKey.ERROR}
+          color={colors[PaletteKey.ERROR]}
           handleColorChange={handleColorChange}
         />
       </form>
