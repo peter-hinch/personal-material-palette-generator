@@ -29,7 +29,7 @@ export const calculateTone = (keyLightness, tone) => {
   } else if (tone > 40 && tone <= 100) {
     // For tones 40-100 the values are evenly distributed
     // between keyLightness - 100 (white)
-    return 100 - ((100 - keyLightness) / 59) * (100 - tone);
+    return parseInt(100 - ((100 - keyLightness) / 59) * (100 - tone));
   } else {
     return undefined;
   }
