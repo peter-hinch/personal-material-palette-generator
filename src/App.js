@@ -36,6 +36,7 @@ function App() {
     <div className="container">
       <h1>Material Design 3 Color Palette Generator</h1>
       <form>
+        <h2>Key Colours</h2>
         <div className="key-container">
           <KeyColorOptions
             name="Primary"
