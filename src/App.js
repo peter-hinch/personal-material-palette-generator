@@ -20,7 +20,6 @@ function App() {
     // ['primary-h-range', 'primary', 'h', 'range']
     const idComponents = idFormat.exec(event.target.id);
     const paletteKey = idComponents[1];
-    console.log('colors[paletteKey]', colors[paletteKey]);
     // Generate a new object using the regex components and the input value.
     const newColorSetting = { [idComponents[2]]: parseInt(event.target.value) };
     const newColorsObject = {
@@ -30,7 +29,6 @@ function App() {
         ...newColorSetting
       }
     };
-    console.log('newColorsObject', newColorsObject);
     setColors(newColorsObject);
   };
 
