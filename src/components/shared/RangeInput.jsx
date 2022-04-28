@@ -10,8 +10,8 @@ const RangeInput = ({
   const inputNumberId = `${colorKey}-${colorComponent}-number`;
 
   return (
-    <div>
-      <label htmlFor={inputRangeId}>{colorComponent}</label>
+    <div className="key-slider">
+      <label htmlFor={inputRangeId}>{colorComponent}:</label>
       <input
         type="range"
         id={inputRangeId}
@@ -21,7 +21,7 @@ const RangeInput = ({
         onChange={handleColorChange}
       />
       <label hidden htmlFor={inputNumberId}>
-        {colorComponent}
+        {colorComponent}:
       </label>
       <input
         type="number"
