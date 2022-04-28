@@ -5,32 +5,39 @@ import { ColorComponent } from '../../palette';
 const KeyColorOptions = ({ name, colorKey, color, handleColorChange }) => {
   const tones = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 99, 100];
 
-  const tonalVariationStyle = (tone) => {
+  const generateHsl = (tone) => {
     let adjustedLum = calculateTone(color.l, tone);
+    return `hsl(${color.h}, ${color.s}%, ${adjustedLum}%)`;
+  };
+
+  const tonalVariationStyle = (tone) => {
+    let backgroundColor = generateHsl(tone);
     let textColor = tone < 50 ? 'white' : 'black';
 
     return {
       color: textColor,
-      backgroundColor: `hsl(${color.h}, ${color.s}%, ${adjustedLum}%)`
+      backgroundColor: backgroundColor
     };
   };
 
-  const handleToneClick = (event) => {
+  const handleToneClick = (event, tone) => {
     event.preventDefault();
-    console.log('tone clicked', event);
+    let colorString = generateHsl(tone);
+    console.log('tone clicked', colorString);
   };
 
   return (
     <div className="key-color">
-      <h3>{name} Key Colour</h3>
-      <div
+      <button
         className="key-swatch"
         style={{
-          background: `hsl(${color.h}, ${color.s}%, ${color.l}%)`
+          color: 'white',
+          background: generateHsl(40)
         }}
+        onClick={(event) => handleToneClick(event, 40)}
       >
-        &nbsp;
-      </div>
+        <h3>{name} Key Colour</h3>
+      </button>
       <div className="key-sliders">
         <RangeInput
           colorKey={colorKey}
@@ -57,13 +64,14 @@ const KeyColorOptions = ({ name, colorKey, color, handleColorChange }) => {
           handleColorChange={handleColorChange}
         />
       </div>
+
       <div className="key-tones">
         {tones.map((tone) => (
           <button
             className="key-tone"
             key={tone}
             style={tonalVariationStyle(tone)}
-            onClick={(event) => handleToneClick(event)}
+            onClick={(event) => handleToneClick(event, tone)}
           >
             <small>{tone}</small>
           </button>
