@@ -15,8 +15,6 @@ const KeyColorOptions = ({ name, colorKey, color, handleColorChange }) => {
     };
   };
 
-  console.log(colorKey);
-
   return (
     <div className="key-container">
       <h3>{name} Key Colour</h3>
