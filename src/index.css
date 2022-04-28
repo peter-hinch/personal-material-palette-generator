@@ -1,23 +1,25 @@
-@media only screen and (max-width: 727px) {
+@media only screen and (max-width: 720px) {
   .container {
     width: 100%;
   }
 
-  .key-container,
+  .key-color,
   .color-scheme {
     border-radius: 0;
   }
 }
-@media only screen and (min-width: 728px) {
+
+@media only screen and (min-width: 721px) {
   .container {
     width: 42.5rem;
   }
 
-  .key-container,
+  .key-color,
   .color-scheme {
     border-radius: 0.5rem;
   }
 }
+
 @media only screen and (min-width: 952px) {
   .container {
     width: 56.5rem;
@@ -55,40 +57,36 @@ h6 {
 }
 
 .key-container {
-  margin: 1rem 0;
-  padding: 1rem;
-  background: #ccc;
-}
-
-.key-color {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.key-tones {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.key-tone {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 4rem;
-  width: 3rem;
+.key-color {
+  margin: 1rem 0;
+  padding: 1rem;
+  flex-grow: 1;
+  background: #ccc;
 }
 
 .key-swatch {
-  min-height: 4rem;
-  min-width: 4rem;
-  border-radius: 2rem;
+  width: 100%;
+  min-height: 5rem;
+  cursor: pointer;
+  border: 0;
 }
 
 .key-sliders {
+  margin: 1rem 0;
   display: flex;
   flex-direction: column;
+}
+
+.key-slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .key-sliders label {
@@ -98,6 +96,24 @@ h6 {
 
 .key-sliders input[type='number'] {
   width: 4rem;
+}
+
+.key-tones {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.key-tone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 2rem;
+  width: 1.5rem;
+  cursor: pointer;
+  border: 0;
 }
 
 .color-scheme {
