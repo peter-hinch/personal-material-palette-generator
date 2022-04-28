@@ -22,7 +22,7 @@ const Swatch = ({ colors, paletteItem }) => {
 
   return (
     <div className="scheme-swatch" style={swatchColorStyle()}>
-      <div>{paletteItem.swatchName}</div>
+      <h3>{paletteItem.swatchName}</h3>
       <div>
         <small>
           {paletteItem.keyDisplayName}
