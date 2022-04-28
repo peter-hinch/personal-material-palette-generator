@@ -23,7 +23,11 @@ const KeyColorOptions = ({ name, colorKey, color, handleColorChange }) => {
   const handleToneClick = (event, tone) => {
     event.preventDefault();
     let colorString = generateHsl(tone);
-    console.log('tone clicked', colorString);
+    // Use navigator.clipboard.writeText() to copy colour data to clipboard.
+    // Reference: https://iq.opengenus.org/copy-to-clipboard-in-javascript/
+    navigator.clipboard.writeText(colorString).then((res) => {
+      console.log(colorString, ' copied to clipboard.');
+    });
   };
 
   return (
