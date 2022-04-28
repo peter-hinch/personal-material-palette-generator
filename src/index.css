@@ -72,8 +72,8 @@ h6 {
 }
 
 .key-swatch {
-  height: 4rem;
-  width: 4rem;
+  min-height: 4rem;
+  min-width: 4rem;
   border-radius: 2rem;
 }
 
