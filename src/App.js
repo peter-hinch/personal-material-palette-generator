@@ -38,39 +38,39 @@ function App() {
       <form>
         <h2>Accent Colours</h2>
         <KeyColorOptions
-          name="Primary Key Colour"
+          name="Primary"
           colorKey={PaletteKey.PRIMARY}
           color={colors[PaletteKey.PRIMARY]}
           handleColorChange={handleColorChange}
         />
         <KeyColorOptions
-          name="Secondary Key Colour"
+          name="Secondary"
           colorKey={PaletteKey.SECONDARY}
           color={colors[PaletteKey.SECONDARY]}
           handleColorChange={handleColorChange}
         />
         <KeyColorOptions
-          name="Tertiary Key Colour"
+          name="Tertiary"
           colorKey={PaletteKey.TERTIARY}
           color={colors[PaletteKey.TERTIARY]}
           handleColorChange={handleColorChange}
         />
         <h2>Neutral Colours</h2>
         <KeyColorOptions
-          name="Neutral Key Colour"
+          name="Neutral"
           colorKey={PaletteKey.NEUTRAL}
           color={colors[PaletteKey.NEUTRAL]}
           handleColorChange={handleColorChange}
         />
         <KeyColorOptions
-          name="Neutral Variant Key Colour"
+          name="Neutral Variant"
           colorKey={PaletteKey.NEUTRAL_VARIANT}
           color={colors[PaletteKey.NEUTRAL_VARIANT]}
           handleColorChange={handleColorChange}
         />
         <h2>Additional Colours</h2>
         <KeyColorOptions
-          name="Error Key Colour"
+          name="Error"
           colorKey={PaletteKey.ERROR}
           color={colors[PaletteKey.ERROR]}
           handleColorChange={handleColorChange}
