@@ -26,12 +26,6 @@ const Swatch = ({ colors, paletteItem }) => {
       <div>
         <small>
           {paletteItem.keyDisplayName}
-          {paletteItem.foregroundTone}
-        </small>
-      </div>
-      <div>
-        <small>
-          {paletteItem.keyDisplayName}
           {paletteItem.backgroundTone}
         </small>
       </div>
