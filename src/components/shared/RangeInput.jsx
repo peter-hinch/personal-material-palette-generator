@@ -1,17 +1,17 @@
 const RangeInput = ({
   colorKey,
-  label,
+  colorComponent,
   min,
   max,
   value,
   handleColorChange
 }) => {
-  const inputRangeId = `${colorKey}-${label}-range`;
-  const inputNumberId = `${colorKey}-${label}-number`;
+  const inputRangeId = `${colorKey}-${colorComponent}-range`;
+  const inputNumberId = `${colorKey}-${colorComponent}-number`;
 
   return (
     <div>
-      <label htmlFor={inputRangeId}>{label}</label>
+      <label htmlFor={inputRangeId}>{colorComponent}</label>
       <input
         type="range"
         id={inputRangeId}
@@ -21,7 +21,7 @@ const RangeInput = ({
         onChange={handleColorChange}
       />
       <label hidden htmlFor={inputNumberId}>
-        {label}
+        {colorComponent}
       </label>
       <input
         type="number"

@@ -30,7 +30,7 @@ const KeyColorOptions = ({ name, colorKey, color, handleColorChange }) => {
         <div className="key-sliders">
           <RangeInput
             colorKey={colorKey}
-            label={ColorComponent.HUE}
+            colorComponent={ColorComponent.HUE}
             min={0}
             max={359}
             value={color.h}
@@ -38,7 +38,7 @@ const KeyColorOptions = ({ name, colorKey, color, handleColorChange }) => {
           />
           <RangeInput
             colorKey={colorKey}
-            label={ColorComponent.SATURATION}
+            colorComponent={ColorComponent.SATURATION}
             min={0}
             max={100}
             value={color.s}
@@ -46,7 +46,7 @@ const KeyColorOptions = ({ name, colorKey, color, handleColorChange }) => {
           />
           <RangeInput
             colorKey={colorKey}
-            label={ColorComponent.LIGHTNESS}
+            colorComponent={ColorComponent.LIGHTNESS}
             min={25}
             max={55}
             value={color.l}
