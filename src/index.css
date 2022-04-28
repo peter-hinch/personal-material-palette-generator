@@ -86,7 +86,9 @@ h6 {
 .key-slider {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  margin-bottom: 0.25rem;
 }
 
 .key-sliders label {
@@ -128,7 +130,7 @@ h6 {
 .scheme-swatch {
   display: inline-block;
   padding: 1rem;
-  height: 5rem;
+  min-height: 5rem;
 }
 
 .scheme-swatch:last-child {
