@@ -2,10 +2,20 @@
   .container {
     width: 100%;
   }
+
+  .key-container,
+  .color-scheme {
+    border-radius: 0;
+  }
 }
 @media only screen and (min-width: 728px) {
   .container {
     width: 42.5rem;
+  }
+
+  .key-container,
+  .color-scheme {
+    border-radius: 0.5rem;
   }
 }
 @media only screen and (min-width: 952px) {
@@ -47,7 +57,6 @@ h6 {
 .key-container {
   margin: 1rem 0;
   padding: 1rem;
-  border-radius: 0.5rem;
   background: #ccc;
 }
 
@@ -82,6 +91,11 @@ h6 {
   flex-direction: column;
 }
 
+.key-sliders label {
+  display: inline-block;
+  width: 1rem;
+}
+
 .key-sliders input[type='number'] {
   width: 4rem;
 }
@@ -92,7 +106,6 @@ h6 {
   padding: 1rem;
   grid-template-columns: repeat(4, auto);
   row-gap: 1rem;
-  border-radius: 0.5rem;
   background: #ccc;
 }
 
