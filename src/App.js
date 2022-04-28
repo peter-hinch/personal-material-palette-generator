@@ -36,7 +36,6 @@ function App() {
     <div className="container">
       <h1>Material Design 3 Color Palette Generator</h1>
       <form>
-        <h2>Accent Colours</h2>
         <div className="key-container">
           <KeyColorOptions
             name="Primary"
@@ -56,9 +55,6 @@ function App() {
             color={colors[PaletteKey.TERTIARY]}
             handleColorChange={handleColorChange}
           />
-        </div>
-        <h2>Neutral Colours</h2>
-        <div className="key-container">
           <KeyColorOptions
             name="Neutral"
             colorKey={PaletteKey.NEUTRAL}
@@ -71,9 +67,6 @@ function App() {
             color={colors[PaletteKey.NEUTRAL_VARIANT]}
             handleColorChange={handleColorChange}
           />
-        </div>
-        <h2>Additional Colours</h2>
-        <div className="key-container">
           <KeyColorOptions
             name="Error"
             colorKey={PaletteKey.ERROR}
