@@ -37,46 +37,54 @@ function App() {
       <h1>Material Design 3 Color Palette Generator</h1>
       <form>
         <h2>Accent Colours</h2>
-        <KeyColorOptions
-          name="Primary"
-          colorKey={PaletteKey.PRIMARY}
-          color={colors[PaletteKey.PRIMARY]}
-          handleColorChange={handleColorChange}
-        />
-        <KeyColorOptions
-          name="Secondary"
-          colorKey={PaletteKey.SECONDARY}
-          color={colors[PaletteKey.SECONDARY]}
-          handleColorChange={handleColorChange}
-        />
-        <KeyColorOptions
-          name="Tertiary"
-          colorKey={PaletteKey.TERTIARY}
-          color={colors[PaletteKey.TERTIARY]}
-          handleColorChange={handleColorChange}
-        />
+        <div className="key-container">
+          <KeyColorOptions
+            name="Primary"
+            colorKey={PaletteKey.PRIMARY}
+            color={colors[PaletteKey.PRIMARY]}
+            handleColorChange={handleColorChange}
+          />
+          <KeyColorOptions
+            name="Secondary"
+            colorKey={PaletteKey.SECONDARY}
+            color={colors[PaletteKey.SECONDARY]}
+            handleColorChange={handleColorChange}
+          />
+          <KeyColorOptions
+            name="Tertiary"
+            colorKey={PaletteKey.TERTIARY}
+            color={colors[PaletteKey.TERTIARY]}
+            handleColorChange={handleColorChange}
+          />
+        </div>
         <h2>Neutral Colours</h2>
-        <KeyColorOptions
-          name="Neutral"
-          colorKey={PaletteKey.NEUTRAL}
-          color={colors[PaletteKey.NEUTRAL]}
-          handleColorChange={handleColorChange}
-        />
-        <KeyColorOptions
-          name="Neutral Variant"
-          colorKey={PaletteKey.NEUTRAL_VARIANT}
-          color={colors[PaletteKey.NEUTRAL_VARIANT]}
-          handleColorChange={handleColorChange}
-        />
+        <div className="key-container">
+          <KeyColorOptions
+            name="Neutral"
+            colorKey={PaletteKey.NEUTRAL}
+            color={colors[PaletteKey.NEUTRAL]}
+            handleColorChange={handleColorChange}
+          />
+          <KeyColorOptions
+            name="Neutral Variant"
+            colorKey={PaletteKey.NEUTRAL_VARIANT}
+            color={colors[PaletteKey.NEUTRAL_VARIANT]}
+            handleColorChange={handleColorChange}
+          />
+        </div>
         <h2>Additional Colours</h2>
-        <KeyColorOptions
-          name="Error"
-          colorKey={PaletteKey.ERROR}
-          color={colors[PaletteKey.ERROR]}
-          handleColorChange={handleColorChange}
-        />
+        <div className="key-container">
+          <KeyColorOptions
+            name="Error"
+            colorKey={PaletteKey.ERROR}
+            color={colors[PaletteKey.ERROR]}
+            handleColorChange={handleColorChange}
+          />
+        </div>
       </form>
+      <h2>Light Theme Colour Palette</h2>
       <ColorScheme colors={colors} colorTheme={ColorTheme.LIGHT} />
+      <h2>Dark Theme Colour Palette</h2>
       <ColorScheme colors={colors} colorTheme={ColorTheme.DARK} />
     </div>
   );

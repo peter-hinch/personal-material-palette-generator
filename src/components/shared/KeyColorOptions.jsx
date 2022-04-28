@@ -15,55 +15,59 @@ const KeyColorOptions = ({ name, colorKey, color, handleColorChange }) => {
     };
   };
 
+  const handleToneClick = (event) => {
+    event.preventDefault();
+    console.log('tone clicked', event);
+  };
+
   return (
-    <div className="key-container">
+    <div className="key-color">
       <h3>{name} Key Colour</h3>
-      <div className="key-color">
-        <div
-          className="key-swatch"
-          style={{
-            background: `hsl(${color.h}, ${color.s}%, ${color.l}%)`
-          }}
-        >
-          &nbsp;
-        </div>
-        <div className="key-sliders">
-          <RangeInput
-            colorKey={colorKey}
-            colorComponent={ColorComponent.HUE}
-            min={0}
-            max={359}
-            value={color.h}
-            handleColorChange={handleColorChange}
-          />
-          <RangeInput
-            colorKey={colorKey}
-            colorComponent={ColorComponent.SATURATION}
-            min={0}
-            max={100}
-            value={color.s}
-            handleColorChange={handleColorChange}
-          />
-          <RangeInput
-            colorKey={colorKey}
-            colorComponent={ColorComponent.LIGHTNESS}
-            min={25}
-            max={55}
-            value={color.l}
-            handleColorChange={handleColorChange}
-          />
-        </div>
-        <ul className="key-tones">
-          {tones.map((tone) => (
-            <li
-              className="key-tone"
-              key={tone}
-              style={tonalVariationStyle(tone)}
-            >
-              {tone}
-            </li>
-          ))}
-        </ul>
+      <div
+        className="key-swatch"
+        style={{
+          background: `hsl(${color.h}, ${color.s}%, ${color.l}%)`
+        }}
+      >
+        &nbsp;
+      </div>
+      <div className="key-sliders">
+        <RangeInput
+          colorKey={colorKey}
+          colorComponent={ColorComponent.HUE}
+          min={0}
+          max={359}
+          value={color.h}
+          handleColorChange={handleColorChange}
+        />
+        <RangeInput
+          colorKey={colorKey}
+          colorComponent={ColorComponent.SATURATION}
+          min={0}
+          max={100}
+          value={color.s}
+          handleColorChange={handleColorChange}
+        />
+        <RangeInput
+          colorKey={colorKey}
+          colorComponent={ColorComponent.LIGHTNESS}
+          min={25}
+          max={55}
+          value={color.l}
+          handleColorChange={handleColorChange}
+        />
+      </div>
+      <div className="key-tones">
+        {tones.map((tone) => (
+          <button
+            className="key-tone"
+            key={tone}
+            style={tonalVariationStyle(tone)}
+            onClick={(event) => handleToneClick(event)}
+          >
+            <small>{tone}</small>
+          </button>
+        ))}
       </div>
     </div>
   );
