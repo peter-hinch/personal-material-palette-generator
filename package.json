@@ -1,6 +1,6 @@
 {
   "name": "material-palette-generator",
-  "homepage": "https://github.com/peter-hinch/personal-material-palette-generator",
+  "homepage": "https://peter-hinch.github.io/personal-material-palette-generator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
