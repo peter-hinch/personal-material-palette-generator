@@ -26,10 +26,12 @@ export const calculateTone = (keyLightness, tone) => {
   } else if (tone === 40) {
     // The provided tone can be returned unchanged.
     return keyLightness;
-  } else if (tone > 40 && tone <= 100) {
+  } else if (tone > 40 && tone < 100) {
     // For tones 40-100 the values are evenly distributed
     // between keyLightness - 100 (white)
-    return parseInt(100 - ((100 - keyLightness) / 59) * (100 - tone));
+    return parseInt(101 - ((100 - keyLightness) / 59) * (100 - tone));
+  } else if (tone === 100) {
+    return 100;
   } else {
     return undefined;
   }
