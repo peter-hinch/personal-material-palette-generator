@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/personal-material-palette-generator/static/css/main.1e4e3084.css",
-    "main.js": "/personal-material-palette-generator/static/js/main.771dd8ee.js",
+    "main.js": "/personal-material-palette-generator/static/js/main.b715361c.js",
     "static/js/787.4d2273a0.chunk.js": "/personal-material-palette-generator/static/js/787.4d2273a0.chunk.js",
     "index.html": "/personal-material-palette-generator/index.html",
     "main.1e4e3084.css.map": "/personal-material-palette-generator/static/css/main.1e4e3084.css.map",
-    "main.771dd8ee.js.map": "/personal-material-palette-generator/static/js/main.771dd8ee.js.map",
+    "main.b715361c.js.map": "/personal-material-palette-generator/static/js/main.b715361c.js.map",
     "787.4d2273a0.chunk.js.map": "/personal-material-palette-generator/static/js/787.4d2273a0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1e4e3084.css",
-    "static/js/main.771dd8ee.js"
+    "static/js/main.b715361c.js"
   ]
 }
